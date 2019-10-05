@@ -1,9 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import './style.css';
+import Canvas from './canvas';
 
-const Index = () => {
-  return <div className="helloworld">Hello React</div>;
-};
-
-ReactDOM.render(<Index />, document.querySelector("#root"));
+ReactDOM.render(<Canvas />, document.querySelector("#root"));
