@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   word: {
     textAlign: "center",
     marginTop: 100,
-    fontSize: 35,
+    fontSize: 55,
   },
 }));
 
@@ -37,7 +37,8 @@ export default function TextFields() {
   const classes = useStyles();
   const [values, setValues] = useState({
     story: '',
-    word: ''
+    word: '',
+    milliseconds: 200
   });
 
   const handleChange = story => event => {
@@ -50,7 +51,7 @@ export default function TextFields() {
       for (let i = 0; i < wordArr.length; i++) {
         setTimeout(() => {
           setValues({...values, 'word': wordArr[i]})
-        }, i*300)
+        }, i * values.milliseconds)
       }
     }
   }
